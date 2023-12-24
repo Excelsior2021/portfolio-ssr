@@ -1,0 +1,57 @@
+<li class="project-item">
+  <div class="project">
+    <div class="project__head">
+      <h2 class="project__name project__name--mobile">
+        <a
+          class="project__link"
+          href=<%= url %>
+          target="_blank"
+          rel="noreferrer">
+          <%= name %>
+        </a>
+      </h2>
+      <img
+        class="project__card-arrow"
+        src=""
+        alt="open/close project card"
+        width="50px"
+      />
+    </div>
+
+    <div
+      class="project__body">
+      <div class="project__image-container">
+        <a href=<%= url %> target="_blank" rel="noreferrer">
+          <img
+            class="project__image"
+            src="./assets/project_images/<%= id %>.png"
+            alt=<%= alt %>
+            role="project image and link to project site"
+          />
+        </a>
+      </div>
+      <h2 class="project__name project__name--desktop">
+        <a
+          class="project__link"
+          href=<%= url %>
+          target="_blank"
+          rel="noreferrer">
+          <%= name %>
+        </a>
+      </h2>
+      <div class="project__description">
+        <p><%= description %></p>
+      </div>
+      <a class="project__github-link" href=<%= github %> target="_blank">
+        <img
+          class="project__github"
+          src="./assets/contact_icons/github.svg"
+          alt="github"
+        />
+      </a>
+      <div class="project__stack">
+        <p><%= stack %></p>
+      </div>
+    </div>
+  </div>
+</li>

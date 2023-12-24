@@ -1,0 +1,62 @@
+.bio {
+  padding: 0 16px;
+
+  &__headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+  }
+
+  &__img {
+    width: 200px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  &__text-container {
+    max-width: 768px;
+    margin: auto;
+  }
+
+  &__text {
+    margin: 1.5rem 0;
+
+    &--remark {
+      color: #456b9e;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__codewars {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    margin: 5rem auto;
+    border: 4px solid grey;
+    background-color: grey;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__codewars-label {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+
+  &__codewars-img {
+    max-width: 100%;
+  }
+}

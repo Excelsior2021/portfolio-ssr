@@ -1,0 +1,60 @@
+@import "./mixins";
+@import "./themes";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 300px;
+  color: rgb(75, 103, 138);
+}
+
+.body--menu-open {
+  overflow: hidden;
+
+  @include media-desktop {
+    overflow: auto;
+  }
+}
+
+a {
+  color: rgb(75, 103, 138);
+}
+
+.dark-theme {
+  background-color: rgb(30, 30, 30);
+  color: rgb(240, 240, 240);
+
+  &a {
+    color: rgb(240, 240, 240);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 16px;
+  min-height: 60vh;
+
+  @include media-desktop {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1280px;
+  }
+}
+
+.counter {
+  display: none;
+}

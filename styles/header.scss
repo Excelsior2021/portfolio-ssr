@@ -1,0 +1,121 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+
+  @include media-desktop {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  &--menu-open {
+    height: 100vh;
+
+    @include media-desktop {
+      height: 100%;
+    }
+  }
+
+  &--dark-mode {
+    background-color: rgb(75, 103, 138);
+
+    @include media-desktop {
+      background-color: rgba(75, 103, 138, 0.95);
+    }
+
+    a {
+      color: rgb(240, 240, 240);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-link {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 38px;
+
+    @include media-desktop {
+      font-size: 3.5rem;
+      padding: 20px 38px;
+    }
+  }
+
+  &__theme-toggle {
+    width: 30px;
+  }
+
+  &__theme-toggle-container {
+    display: none;
+
+    @include media-desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+  }
+
+  &__theme-toggle {
+    filter: invert(85%) sepia(7%) saturate(2991%) hue-rotate(207deg)
+      brightness(107%) contrast(95%);
+  }
+}
+
+.nav {
+  display: flex;
+
+  &__menu {
+    &--mobile {
+      @include media-desktop {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include media-desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    @include media-desktop {
+      display: none;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 50px;
+
+    filter: invert(38%) sepia(14%) saturate(1314%) hue-rotate(174deg)
+      brightness(96%) contrast(85%);
+
+    &--dark-mode {
+      filter: invert(100%) sepia(0%) saturate(6%) hue-rotate(157deg)
+        brightness(100%) contrast(102%);
+    }
+  }
+}

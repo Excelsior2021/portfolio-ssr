@@ -1,0 +1,15 @@
+//partials
+@import "partials/globals";
+@import "partials/mixins";
+@import "partials/themes";
+
+//components
+@import "header";
+@import "menu";
+@import "project-item";
+
+//pages
+@import "landing";
+@import "bio";
+@import "projects";
+@import "contact";

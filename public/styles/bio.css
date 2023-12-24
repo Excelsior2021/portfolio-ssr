@@ -1,0 +1,43 @@
+.bio {
+  padding: 0 16px; }
+  .bio__headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px; }
+  .bio__img {
+    width: 200px; }
+  .bio__heading {
+    text-align: center;
+    margin: 2rem 0; }
+  .bio__text-container {
+    max-width: 768px;
+    margin: auto; }
+  .bio__text {
+    margin: 1.5rem 0; }
+    .bio__text--remark {
+      color: #456b9e;
+      text-align: center; }
+  .bio__link {
+    text-decoration: none; }
+  .bio__codewars {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    margin: 5rem auto;
+    border: 4px solid grey;
+    background-color: grey;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer; }
+  .bio__codewars-label {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    cursor: pointer; }
+  .bio__codewars-img {
+    max-width: 100%; }
+
+/*# sourceMappingURL=bio.css.map */

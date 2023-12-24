@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Jonathan Kila | Web Developer</title>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="landing">
+      <div class="landing__container">
+        <p data-test="landing_heading" class="landing__heading">
+          Hi, my name is Jonathan
+        </p>
+        <p data-test="landing_sub-heading" class="landing__sub-heading">
+          I'm a web developer
+        </p>
+        <ul data-test="landing_stack" class="landing__stack">
+          <% technologies.forEach(tech => { %>
+            <li class="landing__stack-item"><%= tech %></li>
+         <% }); %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

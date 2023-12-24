@@ -1,0 +1,15 @@
+<% const pages = ["bio", "projects", "contact"] %>
+
+<div class="menu">
+  <ul class="menu__list">
+    <% pages.forEach(page => { %>
+    <li class="menu__item"><a class="menu__link" href=<%= page %> ><%= page %> </a></li>
+    <% }); %>
+  </ul>
+  <div class="menu__theme-toggle-container">
+    <img
+      class="menu__theme-toggle"
+      src="./assets/icons/light.svg"
+      alt="theme toggle" />
+  </div>
+</div>

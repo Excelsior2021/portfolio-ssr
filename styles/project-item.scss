@@ -1,0 +1,138 @@
+.project-item {
+  list-style: none;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  background-color: rgb(233, 233, 233);
+  height: 100%;
+  margin: 32px auto;
+  padding: 1.6rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+  @include media-desktop {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    margin: auto;
+  }
+
+  &--dark-mode {
+    background-color: rgba(75, 103, 138, 0.95);
+
+    .project__link {
+      color: rgb(240, 240, 240);
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-desktop {
+      width: 70%;
+    }
+  }
+
+  &__name {
+    &--mobile {
+      @include media-desktop {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include media-desktop {
+        display: flex;
+        justify-content: center;
+        font-size: 2.8rem;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__github-link {
+    margin-top: auto;
+  }
+
+  &__github {
+    display: block;
+    width: 60px;
+    margin: auto;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    filter: invert(38%) sepia(14%) saturate(1314%) hue-rotate(174deg)
+      brightness(96%) contrast(85%);
+
+    &--dark-mode {
+      filter: invert(100%) sepia(0%) saturate(6%) hue-rotate(157deg)
+        brightness(100%) contrast(102%);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__card-arrow {
+    display: block;
+    cursor: pointer;
+
+    @include media-desktop {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @include media-desktop {
+      height: 100%;
+      row-gap: 12px;
+    }
+
+    &--close {
+      display: none;
+
+      @include media-desktop {
+        display: flex;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      transform: scale(1.005);
+      box-shadow: 0 2px 8px rgba(0, 0, 0.1, 0.25);
+    }
+  }
+
+  &__description,
+  &__stack {
+    margin: 1.6rem auto;
+    text-align: center;
+
+    @include media-desktop {
+      margin: auto;
+    }
+  }
+}
