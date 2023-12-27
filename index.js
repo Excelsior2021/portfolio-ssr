@@ -2,7 +2,7 @@ import express from "express"
 import projects from "./store/projects.js"
 
 const app = express()
-const port = 3000
+const port = 8080
 
 app.use(express.static("public"))
 
@@ -35,16 +35,19 @@ app.get("/contact", (_, res) =>
       {
         link: "https://github.com/Excelsior2021",
         img: "./assets/contact_icons/github.svg",
+        alt: "github",
         ariaLabel: "jonathan kila github profile",
       },
       {
         link: "https://www.linkedin.com/in/jonathan-kila",
         img: "./assets/contact_icons/linkedin.svg",
+        alt: "linkedin",
         ariaLabel: "jonathan kila linkedin profile",
       },
       {
         link: "mailto: jonathan.kila10@gmail.com",
         img: "./assets/contact_icons/mail.svg",
+        alt: "email",
         ariaLabel: "email jonathan kila",
       },
     ],

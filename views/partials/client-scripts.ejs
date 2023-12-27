@@ -1,0 +1,86 @@
+<script>
+  const header = document.querySelector(".header")
+  const themeIconContainer = document.querySelector(".header__theme-toggle-container")
+  const themeIcon = document.querySelector(".header__theme-toggle")
+  const menu = document.querySelector(".menu")
+  const navMenuIcon = document.querySelector(".nav__icon")
+  const projectItems = document.querySelectorAll(".project")
+  const githubProjectIcons = document.querySelectorAll(".project__github")
+  const projectCardToggles = document.querySelectorAll(".project__card-arrow")
+  const projectBodies = document.querySelectorAll(".project__body")
+
+  if (localStorage.getItem("darkMode")) {
+    document.body.classList.add("dark-theme")
+    header.classList.add("header--dark-mode")
+    menu.classList.add("menu--dark-mode")
+    navMenuIcon.classList.add("nav__icon--dark-mode")
+    themeIcon.src = "./assets/icons/light.svg"
+    projectItems.forEach(item => item.classList.add("project--dark-mode"))
+    githubProjectIcons.forEach(icon => icon.classList.add("project__github--dark-mode"))
+  }
+
+  const switchTheme = () => {
+    if (localStorage.getItem("darkMode")) {
+      localStorage.removeItem("darkMode")
+      document.body.classList.remove("dark-theme")
+      header.classList.remove("header--dark-mode")
+      menu.classList.remove("menu--dark-mode")
+      navMenuIcon.classList.remove("nav__icon--dark-mode")
+      themeIcon.src = "./assets/icons/dark.svg"
+      projectItems.forEach(item => item.classList.remove("project--dark-mode"))
+      githubProjectIcons.forEach(icon => icon.classList.remove("project__github--dark-mode"))
+    } else {
+      localStorage.setItem("darkMode", true)
+      document.body.classList.add("dark-theme")
+      header.classList.add("header--dark-mode")
+      menu.classList.add("menu--dark-mode")
+      navMenuIcon.classList.add("nav__icon--dark-mode")
+      themeIcon.src = "./assets/icons/light.svg"
+      projectItems.forEach(item => item.classList.add("project--dark-mode"))
+      githubProjectIcons.forEach(icon => icon.classList.add("project__github--dark-mode"))
+    }
+  }
+
+  const toggleMenu = () => {
+    if (navMenuIcon.dataset.state === "close") {
+      document.body.classList.add("body--menu-open")
+      themeIconContainer.classList.add("header__theme-toggle-container--display")
+      navMenuIcon.dataset.state = "open"
+      navMenuIcon.src = "./assets/icons/menu-close.svg"
+      header.classList.add("header--menu-open")
+      menu.classList.add("menu--display")
+    } else {
+      document.body.classList.remove("body--menu-open")
+      themeIconContainer.classList.remove("header__theme-toggle-container--display")
+      navMenuIcon.dataset.state = "close"
+      navMenuIcon.src = "./assets/icons/menu.svg"
+      header.classList.remove("header--menu-open")
+      menu.classList.remove("menu--display")
+    }
+  }
+
+  const toggleProjectCard = id => {
+    projectCardToggles.forEach(toggle => {
+      if (toggle.id === id)
+        if (toggle.dataset.state === "close") {
+          toggle.dataset.state = "open"
+          toggle.src = "./assets/icons/arrow-up.png"
+
+        } else {
+          toggle.dataset.state = "close"
+          toggle.src = "./assets/icons/arrow-down.png"
+        }
+    })
+    projectBodies.forEach(body => {
+      if (body.id === id) {
+        if (body.dataset.state === "close") {
+          body.dataset.state = "open"
+          body.classList.remove("project__body--close")
+        } else {
+          body.dataset.state = "close"
+          body.classList.add("project__body--close")
+        }
+      }
+    })
+  }
+</script>

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <title>Jonathan Kila | Contact</title>
-  </head>
-  <body>
-    <%- include("./partials/header.ejs") %>
-    <div class="contact">
-      <div class="contact__icons">
-        <% contacts.map(({link, img, ariaLabel}) => { %>
-        <a class="contact__icons-link" href=<%= link %> target="_blank" rel="noreferrer">
-          <img
-          class="contact__icons-img"
-          alt="github"
-          src= <%= img %>
-          aria-label= <%= ariaLabel %>
-        />
-      </a>
-        <% }) %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <title>Jonathan Kila | Contact</title>
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+  <main class="main">
+    <main class="main">
+      <div class="contact">
+        <div class="contact__icons">
+          <% contacts.map(({link, img, alt, ariaLabel}) => { %>
+          <a class="contact__icons-link" href=<%= link %> target="_blank" rel="noreferrer">
+            <img class="contact__icons-img" alt=<%= alt %> src=<%= img %> aria-label=<%= ariaLabel %> />
+          </a>
+          <% }) %>
+        </div>
       </div>
-    </div>
-  </body>
+    </main>
+</body>
+
+<%- include("./partials/client-scripts.ejs") %>
+
 </html>

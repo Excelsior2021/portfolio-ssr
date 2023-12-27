@@ -3,19 +3,15 @@
     <a class="header__logo-link" href="/">
       <span class="header__logo">Jonathan Kila</span>
     </a>
-    
-  <nav class="nav">
-    <div class="nav__container">
-      <%- include("menu.ejs") %>
-    </div>
-    <div class="header__theme-toggle-container">
-    <img
-      class="header__theme-toggle"
-      src="./assets/icons/dark.svg"
-      alt="theme toggle"
-    />
-  </div>
-  </nav>
-  </div>
 
+    <nav class="nav">
+      <div class="nav__icon-container" onclick="toggleMenu()">
+        <img data-state="close" class="nav__icon" src="./assets/icons/menu.svg" alt="menu" />
+      </div>
+      <%- include("menu.ejs") %>
+      <div class="header__theme-toggle-container" onclick="switchTheme()">
+        <img class="header__theme-toggle" src="./assets/icons/dark.svg" alt="theme toggle" />
+      </div>
+    </nav>
+  </div>
 </header>

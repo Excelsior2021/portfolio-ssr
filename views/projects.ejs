@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <title>Jonathan Kila | Projects</title>
-  </head>
-  <body>
-    <%- include("./partials/header.ejs") %>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <title>Jonathan Kila | Projects</title>
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+  <main class="main">
     <div class="projects">
       <p class="projects__text">
-        Not an exhuastive list. Please check out my 
-        <a class="projects__text-link"
-          href="https://github.com/Excelsior2021"
-          target="_blank"
-          rel="noreferrer">
+        Not an exhuastive list. Please check out my
+        <a class="projects__text-link" href="https://github.com/Excelsior2021" target="_blank" rel="noreferrer">
           GitHub</a> profile for more projects.
       </p>
       <ul class="projects__list">
         <% projects.forEach(project => { %>
-          <%- include("partials/project-item.ejs", project)  %>
+        <%- include("partials/project-item.ejs", project)  %>
         <% }); %>
       </ul>
     </div>
-  </body>
+  </main>
+</body>
+
+<%- include("./partials/client-scripts.ejs") %>
+
 </html>

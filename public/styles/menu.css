@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'media-desktop'.
-        on line 6 of styles/menu.scss, in `media-desktop'
-        from line 6 of styles/menu.scss
+        on line 16 of styles/menu.scss, in `media-desktop'
+        from line 16 of styles/menu.scss
 
-1: .menu {
-2:   width: 100%;
-3:   height: 100%;
-4:   background-color: white;
-5: 
-6:   @include media-desktop {
-7:     display: flex;
-8:     align-items: center;
-9:     position: static;
-10:     background-color: transparent;
-11:   }
+11: 
+12:   &--dark-mode {
+13:     background-color: rgb(75, 103, 138);
+14:   }
+15: 
+16:   @include media-desktop {
+17:     position: static;
+18:     display: flex;
+19:     align-items: center;
+20:     background-color: transparent;
+21:   }
 
 Backtrace:
-styles/menu.scss:6:in `media-desktop'
-styles/menu.scss:6
+styles/menu.scss:16:in `media-desktop'
+styles/menu.scss:16
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
@@ -73,4 +73,4 @@ C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'media-desktop'.\A         on line 6 of styles/menu.scss, in `media-desktop'\A         from line 6 of styles/menu.scss\A \A 1: .menu {\A 2:   width: 100%;\A 3:   height: 100%;\A 4:   background-color: white;\A 5: \A 6:   @include media-desktop {\A 7:     display: flex;\A 8:     align-items: center;\A 9:     position: static;\A 10:     background-color: transparent;\A 11:   }"; }
+  content: "Error: Undefined mixin 'media-desktop'.\A         on line 16 of styles/menu.scss, in `media-desktop'\A         from line 16 of styles/menu.scss\A \A 11: \A 12:   &--dark-mode {\A 13:     background-color: rgb(75, 103, 138);\A 14:   }\A 15: \A 16:   @include media-desktop {\A 17:     position: static;\A 18:     display: flex;\A 19:     align-items: center;\A 20:     background-color: transparent;\A 21:   }"; }
