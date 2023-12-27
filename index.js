@@ -6,7 +6,7 @@ const port = 8080
 
 app.use(express.static("public"))
 
-app.get("/", (req, res) =>
+app.get("/", (_, res) =>
   res.render("index.ejs", {
     technologies: [
       "React",
